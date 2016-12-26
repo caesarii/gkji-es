@@ -60,5 +60,3 @@ function mixArgs(one, two = "b") {
     log(arguments[1]);
 }
 mixArgs("a");
-
-http://www.examle.com:8080/api/department?token=<token>&domainid=<domainid>&params={pageNow:1}
