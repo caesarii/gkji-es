@@ -229,3 +229,12 @@ console.log(window.self);
 
 // 最佳实践： 默认使用const, 在确定变量的值会发生变化时使用let
 // test
+
+
+
+// identifying substring
+var msg = "Hello world!";
+log(msg.startsWith("Hello"));
+log(msg.endsWith("!"));
+log(msg.includes("o"));
+console.log("qing")
