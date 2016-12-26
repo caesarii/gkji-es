@@ -214,27 +214,32 @@ for(const key in obj) {
 // var 声明的变量时全局对象的属性
 // 涉及window的代码要在浏览器中测试
 var  cat = "miao";
-console.log("window", window.cat);
+// console.log("window", window.cat);
 
 // 使用 var 会重写window对象上的属性
-console.log(window.self);
+// console.log(window.self);
 var self = "lalla";
-console.log(window.self);
+// console.log(window.self);
 
 // let const 声明的全局变量不是全局对象的属性
 // 所以不会重写window的属性，只是会屏蔽
-let self = "qinghe";
+// let self = "qinghe";
 console.log(self);
-console.log(window.self);
+// console.log(window.self);
 
 // 最佳实践： 默认使用const, 在确定变量的值会发生变化时使用let
-// test
+
+function tmp(condition) {
+    if(condition) {
+        var x = 3;
+        console.log(x);
+    } else {
+        var y = 4;
+        console.log(y);
+    }
+    console.log(x);
+    console.log(y);
+}
+tmp(true);
 
 
-
-// identifying substring
-var msg = "Hello world!";
-log(msg.startsWith("Hello"));
-log(msg.endsWith("!"));
-log(msg.includes("o"));
-console.log("qing")
