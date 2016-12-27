@@ -194,6 +194,11 @@ console.log(doAnotherThing.name);
 console.log(doWeirdThing.name);
 
 // 箭头函数
+/*
+*   没有this, arguments
+*   不能通过 new 调用， 没有 prototype
+*   */
+
 // 只有一个参数省略 ()
 const reflect = val => val;
 console.log("arrow", reflect(123));
@@ -231,22 +236,33 @@ console.log("arrowFunc1", arrowFunc1());
 // 函数内的箭头函数的 this 就是外层函数的 this
 var pos = "global"
 function outer() {
-    // this 指向 window
     console.log("outer", this.pos);
     const arrowFunc = () => {
-        // 在作用域链上查询，使用 outer 的 this
+
         console.log("arrow", this.pos);
-    }
+    };
     arrowFunc();
 }
+// outer函数的 this 指向 window
+// 箭头函数在作用域链上查询，使用 outer 的 this
 outer();
 // window
 
+// outer方法的this 指向obj3, 箭头函数也是
 var obj3 = {
     pos: "obj3"
 };
 obj3.outer = outer;
 obj3.outer();
+// obj3
+
+// 全局环境中的箭头函数 this 是undefined
+const arrowFunc = () => {
+
+    console.log("arrow", this.pos);
+};
+arrowFunc();
+
 
 //
 
