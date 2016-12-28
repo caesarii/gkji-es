@@ -1,5 +1,3 @@
-
-
 // 属性初始化简写
 // 当属性名与局部变量相同时可以直接使用局部变量表示属性名和值
 
@@ -26,7 +24,7 @@ console.log(createPerson(name, age));
 // es5 方法
 const robotOne = {
     name: "nicholas",
-    sayName: function() {
+    sayName: function () {
         console.log(this.name);
     }
 };
@@ -84,7 +82,7 @@ console.log(variousBear);
 
 console.log(+0 === -0);
 // true
-console.log( Object.is(+0, -0));
+console.log(Object.is(+0, -0));
 // false
 
 console.log(NaN === NaN);
@@ -96,9 +94,10 @@ console.log(Object.is(NaN, NaN));
 
 // mixin
 function mixin(receiver, supplier) {
-    Object.keys(supplier).forEach((key) => {
+    Object.keys(supplier).forEach((key) = > {
         receiver[key] = supplier[key];
-    });
+})
+    ;
     return receiver;
 }
 
@@ -158,9 +157,9 @@ console.log(obj1.name);
 // es6 无论严格模式 或 非严格模式 都不报错
 
 /*自有属性的枚举顺序
-*   按升序排列的数值属性
-*   按添加顺序排列的字符串属性
-*   按添加顺序排列的symbol属性*/
+ *   按升序排列的数值属性
+ *   按添加顺序排列的字符串属性
+ *   按添加顺序排列的symbol属性*/
 
 
 
