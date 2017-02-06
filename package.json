@@ -1,0 +1,27 @@
+{
+  "name": "Understanding_Ecmascript6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Block_Bindings.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caesar1874/Understanding_Ecmascrrpt6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caesar1874/Understanding_Ecmascrrpt6/issues"
+  },
+  "homepage": "https://github.com/Caesar1874/Understanding_Ecmascrrpt6#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-es2015": "^6.18.0"
+  }
+}
