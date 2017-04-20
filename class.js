@@ -168,6 +168,23 @@ colors.length = 0;
 console.log(colorsV2[0]);
 // red
 
+// 实例方法 与 this
+class Person {
+    constructor() {
+        this.name = "qinghe"
+    }
+    sayGreet() {
+        this.greeting(this.name);
+    }
+    greeting(name) {
+        console.log(this)
+        console.log("hello", this.name)
+    }
+}
+
+var p = new Person();
+p.sayGreet();
+
 
 
 
