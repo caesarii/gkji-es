@@ -72,6 +72,6 @@ function sum6(num1, num2) {
 
 // 3. 通过重命名语法导出默认值
 export {sum6 as default};
-export var nonDefault = 7;
+export const nonDefault = 7;
 
 

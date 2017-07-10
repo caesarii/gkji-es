@@ -68,6 +68,6 @@ console.log((0, _basic_export3.default)(1, 5));
 console.log(sum6(1, 6));*/
 
 // 同时导入默认值和非默认值
+// 默认值必须在非默认值之前
 
-// cosole.log(nonDefault);
 console.log((0, _basic_export3.default)(1, _basic_export2.nonDefault));

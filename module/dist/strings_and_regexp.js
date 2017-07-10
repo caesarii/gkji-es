@@ -1,4 +1,12 @@
-let log = (...args) => console.log.apply(console, args);
+"use strict";
+
+var log = function log() {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+    }
+
+    return console.log.apply(console, args);
+};
 
 // identifying substring
 var msg = "Hello world!";
@@ -17,20 +25,19 @@ log(msg.includes("e", 2));
 log(msg.endsWith("llo", 5));
 
 // repeat
-const str1 = "abc";
+var str1 = "abc";
 log(str1.repeat(3));
 
 // 模板字符串
 
 // 多行字符串
-let message = `multi 
-    line`;
+var message = "multi \n    line";
 log(message);
 // 注意空格
 log(message.length);
 
 // 置换
-let name = "nicholas";
-console.log(`hello, ${name}`);
+var name = "nicholas";
+console.log("hello, " + name);
 
 // tagged template
