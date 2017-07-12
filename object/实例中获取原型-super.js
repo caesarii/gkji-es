@@ -26,7 +26,6 @@ let friend = {
         return super.greeting()
     }
 }
-
 Object.setPrototypeOf(friend, person)
 console.log(friend.greeting())
 

@@ -84,7 +84,7 @@ if(true) {
     let value = "blue";
 }
 // 暂时性死区的边界
-log(typeof dog);
+log(typeof student);
 // undefined
 if(true) {
     let dog = "pug";
